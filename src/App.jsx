@@ -1,28 +1,21 @@
-import 'react-toastify/dist/ReactToastify.css';
-import './App.css'
-import { toast, ToastContainer } from 'react-toastify';
-import React from 'react';
-import { Home, Search, User } from "lucide-react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import MainLayout from "./layout/MainLayout";
 
 function App() {
-  const handleClick = () => {
-    toast.success('İşlem başarılı 🎉');
-  };
-  
-  
   return (
-    <>
-      <Home size={24} color="#4f46e5" />
-      <Search size={24} className="text-blue-500" />
-      <User size={32} strokeWidth={1.5} />
-      <div className="text-3xl font-bold text-blue-500 p-4">
-        Tailwind çalışıyor 🎉
-      </div>
-
-      <button onClick={handleClick}>Bildirim Göster</button>
-      <ToastContainer />
-    </>
-  )
+    <div className="min-h-screen w-full">
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <MainLayout>
+              <HomePage />
+            </MainLayout>
+          </Route>
+        </Switch>
+      </Router>
+    </div>
+  );
 }
 
-export default App
+export default App;
