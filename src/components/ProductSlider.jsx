@@ -6,9 +6,12 @@ import {
   CarouselIndicators,
 } from "reactstrap";
 
+import carousel from '../assets/photos/carousel.jpg';
+import carousel2 from '../assets/photos/carousel2.png';
+
 const items = [
   {
-    src: "https://via.placeholder.com/1200x600/FF5733/FFFFFF?text=Image+1", // Fotoğraf 1
+    src: carousel2, // Fotoğraf 1
     collection: "SUMMER 2025",
     header: "NEW COLLECTION",
     description:
@@ -18,7 +21,7 @@ const items = [
     key: 1,
   },
   {
-    src: "https://via.placeholder.com/1200x600/33A1FF/FFFFFF?text=Image+2", // Fotoğraf 2
+    src: carousel, // Fotoğraf 2
     collection: "FALL 2025",
     header: "LATEST TRENDS",
     description:
@@ -26,16 +29,6 @@ const items = [
     altText: "Slide 2",
     caption: "Slide 2",
     key: 2,
-  },
-  {
-    src: "https://via.placeholder.com/1200x600/33FF57/FFFFFF?text=Image+3", // Fotoğraf 3
-    collection: "WINTER 2025",
-    header: "COZY WINTER COLLECTION",
-    description:
-      "Stay warm with our cozy winter wear collection.",
-    altText: "Slide 3",
-    caption: "Slide 3",
-    key: 3,
   },
 ];
 
@@ -75,13 +68,13 @@ function Slider(args) {
           />
         </div>
         <div className="flex flex-col gap-9 my-9 ml-[15%] absolute">
-          <h5 className="text-white text-base font-bold leading-normal">
+          <h5 className="text-black text-base font-bold leading-normal">
             {item.collection}
           </h5>
-          <h1 className="text-white text-6xl font-bold leading-normal">
+          <h1 className="text-black text-6xl font-bold leading-normal">
             {item.header}
           </h1>
-          <h4 className="text-neutral-50 text-[20px] font-normal leading-8 w-[60%]">
+          <h4 className="text-black text-[20px] font-normal leading-8 w-[60%]">
             {item.description}
           </h4>
           <a
