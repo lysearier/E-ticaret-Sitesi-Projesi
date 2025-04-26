@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import ShopPage from "./pages/ShopPage";
 import MainLayout from "./layout/MainLayout";
 
 function App() {
@@ -10,6 +11,11 @@ function App() {
           <Route exact path="/">
             <MainLayout>
               <HomePage />
+            </MainLayout>
+          </Route>
+          <Route path="/shop">
+            <MainLayout>
+              <ShopPage />
             </MainLayout>
           </Route>
         </Switch>
