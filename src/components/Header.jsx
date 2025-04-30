@@ -31,7 +31,7 @@ export default function Header() {
   return (
     <>
       {/* Mobile Header */}
-      <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+      <header className="lg:hidden relative top-0 left-0 right-0 z-50 bg-white shadow-md">
         <div className="flex justify-between items-center px-4 py-4">
           <h1 className="text-xl font-bold text-gray-900">Bandage</h1>
           <div className="flex items-center gap-4 text-gray-800">
@@ -65,7 +65,7 @@ export default function Header() {
               Pricing
             </a>
             <a
-              href="#"
+              href="/contact"
               className="no-underline text-gray-600 hover:text-gray-900 transition-colors"
             >
               Contact
@@ -75,7 +75,7 @@ export default function Header() {
       </header>
 
       {/* Desktop Header */}
-      <div className="hidden lg:flex flex-col w-full fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+      <div className="hidden lg:flex flex-col w-full relative top-0 left-0 right-0 z-50 bg-white shadow-md">
         {/* Üst Bilgi Barı */}
         <div className="bg-gray-900 text-white text-sm md:text-base px-6 md:px-12 py-4 flex flex-wrap justify-between items-center gap-y-2 w-full">
           {/* Sol: Telefon ve Mail */}
@@ -162,7 +162,7 @@ export default function Header() {
                 Blog
               </a>
               <a
-                href="#"
+                href="/contact"
                 className="no-underline text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Contact
