@@ -1,8 +1,8 @@
-import FeaturedPost from './cards/FeaturedPosts';
+import FeaturedPost from '.././cards/FeaturedPosts';
 
-import post1 from '../assets/photos/post1.jpg';
-import post2 from '../assets/photos/post2.jpg';
-import post3 from '../assets/photos/post3.jpg';
+import post1 from "../../assets/photos/post1.jpg";
+import post2 from "../../assets/photos/post2.jpg";
+import post3 from "../../assets/photos/post3.jpg";
 
 const posts = [
   {

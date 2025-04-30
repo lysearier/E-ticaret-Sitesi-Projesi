@@ -1,13 +1,13 @@
-import ProductCard from './cards/ProductCard';
+import ProductCard from ".././cards/ProductCard";
 
-import model1 from '../assets/photos/model1.jpg';
-import model2 from '../assets/photos/model2.jpg';
-import model3 from '../assets/photos/model3.jpg';
-import model4 from '../assets/photos/model4.jpg';
-import model5 from '../assets/photos/model5.jpg';
-import model6 from '../assets/photos/model6.jpg';
-import model7 from '../assets/photos/model7.jpg';
-import model8 from '../assets/photos/model8.jpg';
+import model1 from "../../assets/photos/model1.jpg";
+import model2 from "../../assets/photos/model2.jpg";
+import model3 from "../../assets/photos/model3.jpg";
+import model4 from "../../assets/photos/model4.jpg";
+import model5 from "../../assets/photos/model5.jpg";
+import model6 from "../../assets/photos/model6.jpg";
+import model7 from "../../assets/photos/model7.jpg";
+import model8 from "../../assets/photos/model8.jpg";
 
 const productData = [
   {

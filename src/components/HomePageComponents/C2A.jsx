@@ -1,4 +1,4 @@
-import image from '../assets/photos/image.png';
+import image from '../../assets/photos/image.png';
 
 export default function ProductContainer() {
   return (

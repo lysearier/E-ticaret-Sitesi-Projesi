@@ -1,7 +1,7 @@
 import ShopPageNavMenu from "../components/ShopPageComponents/ShopPageNavMenu";
 import ShopPageCategory from "../components/ShopPageComponents/ShopPageCategory";
 import ShopPageProducts from "../components/ShopPageComponents/ShopPageProducts";
-import ShopPageBrands from "../components/ShopPageComponents/ShopPageBrands";
+import Brands from "../components/Brands";
 
 export default function ShopPage() {
   return (
@@ -9,7 +9,7 @@ export default function ShopPage() {
       <ShopPageNavMenu />
       <ShopPageCategory />
       <ShopPageProducts />
-      <ShopPageBrands />
+      <Brands />
     </>
   );
 }

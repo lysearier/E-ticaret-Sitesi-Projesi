@@ -1,7 +1,7 @@
-import accessories from '../assets/photos/accessories.jpg';
-import kids from '../assets/photos/kids.jpg';
-import men from '../assets/photos/men.jpg';
-import women from '../assets/photos/women.jpg';
+import accessories from "../../assets/photos/accessories.jpg";
+import kids from "../../assets/photos/kids.jpg";
+import men from "../../assets/photos/men.jpg";
+import women from "../../assets/photos/women.jpg";
 
 import React from "react";
  

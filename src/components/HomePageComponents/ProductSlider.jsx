@@ -6,12 +6,12 @@ import {
   CarouselIndicators,
 } from "reactstrap";
 
-import carousel from '../assets/photos/carousel.jpg';
-import carousel2 from '../assets/photos/carousel2.png';
+import carousel from "../../assets/photos/carousel.jpg";
+import carousel2 from '../../assets/photos/carousel2.png';
 
 const items = [
   {
-    src: carousel, // Fotoğraf 1
+    src: carousel2, // Fotoğraf 1
     collection: "SUMMER 2025",
     header: "NEW COLLECTION",
     description:
@@ -21,7 +21,7 @@ const items = [
     key: 1,
   },
   {
-    src: carousel2, // Fotoğraf 2
+    src: carousel, // Fotoğraf 2
     collection: "FALL 2025",
     header: "LATEST TRENDS",
     description:

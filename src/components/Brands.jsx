@@ -1,9 +1,9 @@
-import clients1 from "../../assets/photos/clients1.svg";
-import clients2 from "../../assets/photos/clients2.svg";
-import clients3 from "../../assets/photos/clients3.svg";
-import clients4 from "../../assets/photos/clients4.svg";
-import clients5 from "../../assets/photos/clients5.svg";
-import clients6 from "../../assets/photos/clients6.svg";
+import clients1 from "../assets/photos/clients1.svg";
+import clients2 from "../assets/photos/clients2.svg";
+import clients3 from "../assets/photos/clients3.svg";
+import clients4 from "../assets/photos/clients4.svg";
+import clients5 from "../assets/photos/clients5.svg";
+import clients6 from "../assets/photos/clients6.svg";
 
 const clients = [
   { imageURL: clients1 },
@@ -26,7 +26,7 @@ export default function Clients() {
             <img
               src={item.imageURL}
               alt={`Client ${index + 1}`}
-              className="w-full max-h-24 object-contain"
+              className="w-full max-h-20 object-contain"
             />
           </div>
         ))}

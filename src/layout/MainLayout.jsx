@@ -5,10 +5,10 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="lg:mt-40">{children}</main>
+      <main className="mt-16 lg:mt-40">{children}</main>
       <Footer />
     </>
-  )
+  );
 }
 
 export default MainLayout;

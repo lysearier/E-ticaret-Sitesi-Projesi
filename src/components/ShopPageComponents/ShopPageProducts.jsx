@@ -1,6 +1,7 @@
 import ProductCard from "../cards/ProductCard";
 import { useState, useEffect } from "react";
 import { LayoutGrid, List } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import model1 from "../../assets/photos/model1.jpg";
 import model2 from "../../assets/photos/model2.jpg";
@@ -13,6 +14,7 @@ import model8 from "../../assets/photos/model8.jpg";
 
 const productData = [
   {
+    id: 1,
     image: model1,
     title: "Graphic Design",
     subtitle: "English Department",
@@ -21,6 +23,7 @@ const productData = [
     colors: ["#3B82F6", "#10B981", "#F97316", "#1E3A8A"],
   },
   {
+    id: 2,
     image: model2,
     title: "UX Research",
     subtitle: "Psychology",
@@ -29,6 +32,7 @@ const productData = [
     colors: ["#DC2626", "#9333EA", "#3B82F6"],
   },
   {
+    id: 3,
     image: model3,
     title: "Web Development",
     subtitle: "Engineering",
@@ -37,6 +41,7 @@ const productData = [
     colors: ["#16A34A", "#FACC15"],
   },
   {
+    id: 4,
     image: model4,
     title: "Illustration",
     subtitle: "Fine Arts",
@@ -45,6 +50,7 @@ const productData = [
     colors: ["#E11D48", "#7C3AED"],
   },
   {
+    id: 5,
     image: model5,
     title: "Digital Marketing",
     subtitle: "Business",
@@ -53,6 +59,7 @@ const productData = [
     colors: ["#0EA5E9", "#D97706"],
   },
   {
+    id: 6,
     image: model6,
     title: "Photography",
     subtitle: "Media",
@@ -61,6 +68,7 @@ const productData = [
     colors: ["#4B5563", "#F59E0B", "#8B5CF6"],
   },
   {
+    id: 7,
     image: model7,
     title: "Animation",
     subtitle: "Film School",
@@ -69,6 +77,7 @@ const productData = [
     colors: ["#F43F5E", "#10B981", "#6366F1"],
   },
   {
+    id: 8,
     image: model8,
     title: "Game Design",
     subtitle: "Computer Science",
@@ -84,8 +93,8 @@ const PRODUCTS_PER_PAGE_MOBILE = 4;
 
 export default function ShopPageProducts() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [viewMode, setViewMode] = useState("grid"); // "grid" or "list"
-  const [sortOrder, setSortOrder] = useState(""); // "", "price-asc", "price-desc"
+  const [viewMode, setViewMode] = useState("grid");
+  const [sortOrder, setSortOrder] = useState("");
   const [products, setProducts] = useState(productData);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -94,8 +103,8 @@ export default function ShopPageProducts() {
       const nowMobile = window.innerWidth < 768;
       if (nowMobile !== isMobile) {
         setIsMobile(nowMobile);
-        setViewMode("grid"); // Her zaman grid moda dön
-        setCurrentPage(1); // Sayfayı sıfırla
+        setViewMode("grid");
+        setCurrentPage(1);
       }
     };
 
@@ -110,7 +119,6 @@ export default function ShopPageProducts() {
     : PRODUCTS_PER_PAGE_LIST;
 
   const totalPages = Math.ceil(products.length / PRODUCTS_PER_PAGE);
-
   const startIndex = (currentPage - 1) * PRODUCTS_PER_PAGE;
   const currentProducts = products.slice(
     startIndex,
@@ -209,9 +217,10 @@ export default function ShopPageProducts() {
           viewMode === "grid" ? (
             <ProductCard key={i} {...item} />
           ) : (
-            <div
+            <Link
+              to={`/product/${item.id}`}
               key={i}
-              className="flex flex-col sm:flex-row border rounded-lg overflow-hidden"
+              className="flex flex-col sm:flex-row border rounded-lg overflow-hidden hover:shadow cursor-pointer"
             >
               <img
                 src={item.image}
@@ -222,7 +231,6 @@ export default function ShopPageProducts() {
                 <div>
                   <h2 className="text-lg font-bold">{item.title}</h2>
                   <p className="text-gray-500">{item.subtitle}</p>
-                  {/* Colors */}
                   <div className="flex items-center gap-2 mt-2">
                     {item.colors.map((color, idx) => (
                       <div
@@ -242,11 +250,11 @@ export default function ShopPageProducts() {
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
           )
         )}
 
-        {/* Boş kartlar grid görünümde hizalama için */}
+        {/* Boş kartlar (grid hizalama için) */}
         {viewMode === "grid" &&
           emptyCards.map((_, i) => (
             <div
