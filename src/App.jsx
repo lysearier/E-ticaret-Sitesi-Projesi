@@ -7,6 +7,7 @@ import MainLayout from "./layout/MainLayout";
 import CtaLayout from "./layout/CtaLayout";
 import ContactPage from "./pages/ContactPage";
 import TeamPage from "./pages/TeamPage";
+import AboutUsPage from "./pages/AboutUsPage";
 
 
 function App() {
@@ -38,6 +39,11 @@ function App() {
           <Route path="/team">
             <CtaLayout>
               <TeamPage />
+            </CtaLayout>
+          </Route>
+          <Route path="/about">
+            <CtaLayout>
+              <AboutUsPage />
             </CtaLayout>
           </Route>
         </Switch>

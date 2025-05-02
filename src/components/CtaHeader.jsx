@@ -30,16 +30,16 @@ export default function CtaHeader() {
               Home
             </Link>
             <Link
-              to="/product"
+              to="/shop"
               className="no-underline text-gray-600 hover:text-gray-900 transition-colors"
             >
-              Product
+              Shop
             </Link>
             <Link
-              to="/pricing"
+              to="/team"
               className="no-underline text-gray-600 hover:text-gray-900 transition-colors"
             >
-              Pricing
+              Team
             </Link>
             <Link
               to="/contact"
@@ -65,16 +65,16 @@ export default function CtaHeader() {
                 Home
               </Link>
               <Link
-                to="/product"
+                to="/shop"
                 className="text-sm text-gray-500 hover:text-gray-900"
               >
-                Product
+                Shop
               </Link>
               <Link
-                to="/pricing"
+                to="/team"
                 className="text-sm text-gray-500 hover:text-gray-900"
               >
-                Pricing
+                Team
               </Link>
               <Link to="/contact" className="text-sm font-bold text-gray-900">
                 Contact

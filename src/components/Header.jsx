@@ -59,16 +59,16 @@ export default function Header() {
               Shop
             </Link>
             <a
-              href="#"
-              className="no-underline text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              Pricing
-            </a>
-            <a
               href="/contact"
               className="no-underline text-gray-600 hover:text-gray-900 transition-colors"
             >
               Contact
+            </a>
+            <a
+              href="/team"
+              className="no-underline text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              Team
             </a>
           </nav>
         )}
@@ -150,7 +150,7 @@ export default function Header() {
               </div>
 
               <a
-                href="#"
+                href="/about"
                 className="no-underline text-gray-600 hover:text-gray-900 transition-colors"
               >
                 About
