@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Menu, User, Search, ShoppingCart } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export default function ContactPageHeader() {
+export default function CtaHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (

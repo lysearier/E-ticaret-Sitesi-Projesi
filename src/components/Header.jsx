@@ -168,10 +168,10 @@ export default function Header() {
                 Contact
               </a>
               <a
-                href="#"
+                href="/team"
                 className="no-underline text-gray-600 hover:text-gray-900 transition-colors"
               >
-                Pages
+                Team
               </a>
             </nav>
           </div>

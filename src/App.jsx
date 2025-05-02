@@ -2,9 +2,11 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";
-import ProductDetail from "./pages/ProductDetailPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import MainLayout from "./layout/MainLayout";
+import CtaLayout from "./layout/CtaLayout";
 import ContactPage from "./pages/ContactPage";
+import TeamPage from "./pages/TeamPage";
 
 
 function App() {
@@ -25,11 +27,18 @@ function App() {
           </Route>
           <Route path="/product/:id">
             <MainLayout>
-              <ProductDetail />
+              <ProductDetailPage />
             </MainLayout>
           </Route>
           <Route path="/contact">
+            <CtaLayout>
               <ContactPage />
+            </CtaLayout>
+          </Route>
+          <Route path="/team">
+            <CtaLayout>
+              <TeamPage />
+            </CtaLayout>
           </Route>
         </Switch>
       </Router>
